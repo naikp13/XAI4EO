@@ -1,6 +1,6 @@
 # XAI4EO
 
-A Python package for automated machine learning on hyperspectral and multispectral imaging data, focusing on AutoML driven modeling and Explainable AI for EO applications.
+A Python based focusing on AutoML driven modeling and Explainable AI for EO applications. A part of the package was used to conduct experiments for end-to-end automated forest analysis published in the paper accessible at - https://doi.org/10.1109/jstars.2022.3232583 . 
 
 ## Installation
 
@@ -68,7 +68,24 @@ optimize_h2o_automl(X_train, C_ref, RESULTS_DIR, n_trials=3000)
 X_test = load_data('/test_data/test.npy')
 
 predictions = predict_targets(X_test, RESULTS_DIR, model_type="h2o_automl")
+
 ```
+
+## Cite this work
+
+Please cite this article in case this method was helpful for your research or used for your work,
+
+```Citation
+Naik, P., Dalponte, M., & Bruzzone, L. (2023). Automated Machine Learning Driven Stacked Ensemble Modeling for Forest Aboveground Biomass Prediction Using Multitemporal Sentinel-2 Data. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 16, 3442–3454. https://doi.org/10.1109/jstars.2022.3232583
+```
+
+## Contact
+
+For issues or questions, open an issue on GitHub or contact [parthnaik1993@gmail.com](mailto:parthnaik1993@gmail.com).
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
 
 ## License
 
