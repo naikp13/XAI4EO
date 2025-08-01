@@ -1,6 +1,6 @@
 # XAI4EO
 
-A Python based focusing on AutoML driven modeling and Explainable AI for EO applications. A part of the package was used to conduct experiments for end-to-end automated forest analysis published in the paper accessible at - https://doi.org/10.1109/jstars.2022.3232583 . A part of the package is also developed for contesting at the HYPERVIEW2 Challenge implemented as part of the Explainable AI in Space (EASi) workshop - https://ai4eo.eu/portfolio/easi-workshop-hyperview2/
+A Python-based package designed for AutoML-driven Earth Observation (EO) data modeling and Explainable AI (XAI) in EO applications. A few components of the package were utilized in end-to-end automated forest analysis, as presented in - https://doi.org/10.1109/jstars.2022.3232583 . Further developements supported participation in the HYPERVIEW2 Challenge, conducted as part of the Explainable AI in Space (EASi) workshop - https://ai4eo.eu/portfolio/easi-workshop-hyperview2/
 
 <img src="https://raw.githubusercontent.com/naikp13/XAI4EO/main/XAI_image.gif" alt="XAI" width="800"/>
 
