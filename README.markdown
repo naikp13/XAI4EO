@@ -41,7 +41,7 @@ X_test = load_data('/content/drive/MyDrive/hyperview/processed_data/X1_test_hsi_
 predictions = predict_targets(X_test, RESULTS_DIR, model_type="svr")
 ```
 
-### H2O AutoML Example
+### AutoML Example
 ```python
 from src import load_ground_truth, load_npz_files, remove_water_bands, prepare_features, gram_schmidt_pansharpen, optimize_h2o_automl, predict_targets
 from pathlib import Path
