@@ -1,11 +1,11 @@
 # XAI4EO
 
-A Python package for automated machine learning on hyperspectral and multispectral imaging data, focusing on pansharpening and regression modeling for geochemical analysis.
+A Python package for automated machine learning on hyperspectral and multispectral imaging data, focusing on AutoML driven modeling and Explainable AI for EO applications.
 
 ## Installation
 
 ```bash
-pip install XAI4EO
+from XAI4EO.src import *
 ```
 
 ## Requirements
@@ -20,8 +20,8 @@ from src import load_ground_truth, load_npz_files, remove_water_bands, prepare_f
 from pathlib import Path
 
 # Define paths
-DATASET_DIR = Path('/content/drive/MyDrive/hyperview/eotdl/datasets/HYPERVIEW2/')
-RESULTS_DIR = Path('/content/drive/MyDrive/hyperview/results/')
+DATASET_DIR = Path('/dataset/directory/')
+RESULTS_DIR = Path('/results/directory/')
 GT_TRAIN_CSV = DATASET_DIR / 'train_gt.csv'
 HSI_SATELLITE_TRAIN_DIR = DATASET_DIR / 'train/hsi_satellite'
 MSI_SATELLITE_TRAIN_DIR = DATASET_DIR / 'train/msi_satellite'
@@ -47,16 +47,17 @@ from src import load_ground_truth, load_npz_files, remove_water_bands, prepare_f
 from pathlib import Path
 
 # Define paths
-DATASET_DIR = Path('/content/drive/MyDrive/hyperview/eotdl/datasets/HYPERVIEW2/')
-RESULTS_DIR = Path('/content/drive/MyDrive/hyperview/results/')
+DATASET_DIR = Path('/dataset/directory/')
+RESULTS_DIR = Path('/results/directory')
 GT_TRAIN_CSV = DATASET_DIR / 'train_gt.csv'
 HSI_SATELLITE_TRAIN_DIR = DATASET_DIR / 'train/hsi_satellite'
 MSI_SATELLITE_TRAIN_DIR = DATASET_DIR / 'train/msi_satellite'
 
 # Load data
+n_samples_train = 
 C_ref = load_ground_truth(GT_TRAIN_CSV)
-hsi_train = load_npz_files(HSI_SATELLITE_TRAIN_DIR, 1876, "HSI")
-msi_train = load_npz_files(MSI_SATELLITE_TRAIN_DIR, 1876, "MSI")
+hsi_train = load_npz_files(HSI_SATELLITE_TRAIN_DIR, n_samples_train, "HSI")
+msi_train = load_npz_files(MSI_SATELLITE_TRAIN_DIR, n_samples_train, "MSI")
 hsi_train_rwb = remove_water_bands(hsi_train)
 X_train = prepare_features(hsi_train_rwb, msi_train, gram_schmidt_pansharpen)
 
@@ -64,8 +65,7 @@ X_train = prepare_features(hsi_train_rwb, msi_train, gram_schmidt_pansharpen)
 optimize_h2o_automl(X_train, C_ref, RESULTS_DIR, n_trials=3000)
 
 # Predict on test data
-X_test = load_data('/content/drive/MyDrive/hyperview/processed_data/X1_test_hsi_rwb_msi_gs.npy')
- непод
+X_test = load_data('/test_data/test.npy')
 
 predictions = predict_targets(X_test, RESULTS_DIR, model_type="h2o_automl")
 ```
